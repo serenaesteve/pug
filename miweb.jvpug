@@ -1,0 +1,68 @@
+doctype
+html lang="es"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title #{ $nombre_site }
+    link rel="stylesheet" href="JVestilo/JVestilo.php"
+
+  body class="flex fd-column fj-center fa-center b-lightgrey ff-sans-serif p-20"
+    header class="w-800 b-white p-20 ta-center flex fd-column g-20"
+      h1 class="p-0 m-0 fs-36" #{ $nombre_site }
+      h2 class="p-0 m-0 fs-16" #{ $titulo_site }
+
+      nav class="flex g-1 fa-center fj-center"
+        a href="?" class="b-lightgray p-10 c-black td-none fs-10 w-70" Inicio
+        @foreach $paginas as $f
+          a href="?p=#{urlencode($f['titulo'])}" class="b-lightgray p-10 c-black td-none fs-10 w-70" #{ $f['titulo'] }
+        a href="?p=blog" class="b-lightgray p-10 c-black td-none fs-10 w-70" Blog
+        a href="perfil.php" class="b-lightgray p-10 c-black td-none fs-10 w-70" Perfil
+
+    main class="w-800 b-white p-20 flex fd-column g-20"
+      @if !$p
+        section id="heroe" class="w-800 h-400 b-lightgray p-20" style="box-sizing:border-box;"
+          h3 class="m-0" Bienvenida
+          p class="m-0"
+            | Soy Serena Sania Esteve: técnica administrativa con experiencia y actualmente estudiando DAM.
+          p class="m-0"
+            | Me interesa aplicar tecnología, automatización e IA para mejorar procesos en empresa.
+
+        section class="grid gc-2 g-20"
+          article class="ta-center h-200 flex fd-column fa-center fj-center b-lightgray"
+            h3 class="m-0" Gestión administrativa
+            p class="m-0" Organización, documentación y atención al cliente
+          article class="ta-center h-200 flex fd-column fa-center fj-center b-lightgray"
+            h3 class="m-0" Tecnología aplicada
+            p class="m-0" Herramientas digitales, CRM, SEM y automatización
+
+        section class="grid gc-3 g-20"
+          @for i in range(1, 7)
+            article class="ta-center b-lightgray p-10"
+              h3 class="m-0" Aprendizaje continuo
+              p class="m-0" Formación técnica y mejora constante
+
+      @else
+        @if $p === "blog"
+          section class="grid gc-3 g-20"
+            @foreach $entradas as $e
+              article class="b-lightgray p-10"
+                h3 class="m-0" #{ $e['titulo'] }
+                time class="fs-10" #{ $e['fecha'] }
+                div
+                  !{ $e['contenido'] }
+        @else
+          @if $pagina
+            section class="flex fd-column g-20"
+              @foreach $pagina as $pg
+                article class="b-lightgray p-10"
+                  h3 class="m-0" #{ $pg['titulo'] }
+                  div
+                    !{ $pg['contenido'] }
+          @else
+            section class="b-lightgray p-20"
+              h3 class="m-0" Página no encontrada
+              p class="m-0" No existe contenido para esa URL.
+
+    footer class="w-800 b-white p-20 ta-center"
+      | © #{ $year } Serena Sania Esteve
+

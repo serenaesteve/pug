@@ -1,0 +1,39 @@
+doctype
+html lang="es"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title #{ nombre } - Perfil
+    link rel="stylesheet" href="JVestilo/JVestilo.php"
+
+  body class="flex fd-column fj-center fa-center b-lightgrey ff-sans-serif p-20"
+    header class="w-800 b-white p-20 ta-center flex fd-column g-20"
+      h1 class="p-0 m-0 fs-36" #{ nombre }
+      h2 class="p-0 m-0 fs-16" #{ titulo }
+
+    main class="w-800 b-white p-20 flex fd-column g-20"
+      section class="b-lightgray p-20"
+        h3 class="m-0" Sobre mí
+        p class="m-0" #{ descripcion }
+
+      section class="b-lightgray p-20"
+        h3 class="m-0" Áreas de trabajo
+        ul
+          @foreach $areas as $area
+            li #{ $area }
+
+      section class="b-lightgray p-20"
+        h3 class="m-0" Enfoque
+        p class="m-0" !{ enfoque_html }
+
+      section class="b-lightgray p-20"
+        h3 class="m-0" Datos
+        ul
+          @foreach $datos as $k => $v
+            li
+              strong #{ $k }:
+              |  #{ $v }
+
+    footer class="w-800 b-white p-20 ta-center"
+      | © #{ year } #{ nombre }
+

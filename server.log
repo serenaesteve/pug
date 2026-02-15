@@ -1,0 +1,17 @@
+[Sun Feb 15 11:24:46 2026] PHP 8.3.6 Development Server (http://127.0.0.1:8000) started
+[Sun Feb 15 11:25:22 2026] 127.0.0.1:53994 Accepted
+[Sun Feb 15 11:25:22 2026] 127.0.0.1:53994 [404]: GET /JVestilo/JVestilo.php - No such file or directory
+[Sun Feb 15 11:25:22 2026] 127.0.0.1:53994 Closing
+[Sun Feb 15 11:25:22 2026] 127.0.0.1:54002 Accepted
+[Sun Feb 15 11:25:22 2026] 127.0.0.1:54014 Accepted
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54002 [404]: GET /JVestilo/JVestilo.php - No such file or directory
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54002 Closing
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54022 Accepted
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54014 [404]: GET /JVestilo/JVestilo.php - No such file or directory
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54014 Closing
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54028 Accepted
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54022 [404]: GET /JVestilo/JVestilo.php - No such file or directory
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54022 Closing
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54044 Accepted
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54028 [404]: GET /JVestilo/JVestilo.php - No such file or directory
+[Sun Feb 15 11:25:23 2026] 127.0.0.1:54028 Closing
